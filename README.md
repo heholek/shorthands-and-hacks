@@ -19,6 +19,7 @@ cat list.csv | cut -d, -f1
 
 #### Installing Siege
 
+```bash
 sudo apt-get update && sudo apt-get upgrade --show-upgraded
 wget http://download.joedog.org/siege/siege-latest.tar.gz
 tar -zxvf siege-latest.tar.gz
@@ -27,12 +28,17 @@ sudo apt-get install build-essential
 ./configure
 make
 sudo make install
+```
 
 #### Running benchmark with multi-target
 
+```bash
 siege -c8 -t50s -f urls.txt
+```
 
 #### Sniffing requests
 
+```bash
 sudo apt-get install dsniff 
 sudo urlsnarf -i eth0
+```
