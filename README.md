@@ -13,6 +13,12 @@ head -n 1000 out.csv
 
 # get first column of csv
 cat list.csv | cut -d, -f1
+
+# intersection between two files
+grep -Fx -f a.csv b.csv
+
+# common lines in two files
+sort a.csv b.csv | uniq -d
 ```
 
 ### Benchmarking URL's
