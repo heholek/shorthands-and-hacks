@@ -19,6 +19,12 @@ grep -Fx -f a.csv b.csv
 
 # common lines in two files
 sort a.csv b.csv | uniq -d
+
+# show lines which are in a_file and not in b_file
+comm -23 <(cat a_file | sort | uniq) <(cat b_file | sort | uniq)
+
+# show lines common in a_file and in b_file
+comm -12 <(cat a_file | sort | uniq) <(cat b_file | sort | uniq)
 ```
 
 ### Benchmarking URL's
