@@ -27,6 +27,13 @@ comm -23 <(cat a_file | sort | uniq) <(cat b_file | sort | uniq)
 comm -12 <(cat a_file | sort | uniq) <(cat b_file | sort | uniq)
 ```
 
+### CLI & CSV
+
+```bash
+# https://csvkit.readthedocs.io/en/1.0.3/
+csvcut -c 1,3 original_file.csv > new_file.csv
+```
+
 ### Benchmarking URL's
 
 #### Installing Siege
